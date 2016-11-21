@@ -50,6 +50,7 @@ scotchApp.controller('scotchController', function ($scope, $http, $modal) {
         totalItems: 3
     };
 
+
     // 通过$watch currentPage和itemperPage 当他们一变化的时候，重新获取数据条目
     // $scope.$watch('paginationConf.currentPage + paginationConf.itemsPerPage', reGetProducts);
 
