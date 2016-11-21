@@ -25,24 +25,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>1</td>
-            <td>Demon</td>
-            <td>$25</td>
-            <td><a ng-click="open()">详情</a></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Demon</td>
-            <td>$25</td>
-            <td><a ng-click="open()">详情</a></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Demon</td>
-            <td>$25</td>
-            <td><a ng-click="open()">详情</a></td>
+        <tr ng-repeat="order in orders">
+            <td>{{order.orderNo}}</td>
+            <td>{{order.memberName}}</td>
+            <td>{{order.price}}</td>
+            <td><a ng-click="open(order)">详情</a></td>
         </tr>
         </tbody>
     </table>
+    <tm-pagination conf="paginationConf"></tm-pagination>
 </div>
