@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="scotchApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/metisMenu.min.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body ng-controller="scotchController">
+    <div ng-include="'layout/header.html'"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div ng-include="'layout/menu.html'"></div>
+            <!--<ng-include src="'layout/menu.html'"></ng-include>-->
+            <div ng-include="'layout/main.html'"></div>
+        </div>
+    </div>
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/metisMenu.min.js"></script>
+    <script src="../js/lib/bootstrap.min.js"></script>
+    <script src="../js/lib/angular.min.js"></script>
+    <script src="../js/lib/angular-route.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
