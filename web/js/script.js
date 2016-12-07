@@ -1,12 +1,18 @@
-var scotchApp = angular.module('scotchApp', ['ngRoute', 'ui.bootstrap', 'tm.pagination']);
+var scotchApp = angular.module('scotchApp', ['ui.router', 'ui.bootstrap', 'tm.pagination']);
 
-scotchApp.config(["$routeProvider", function ($routeProvider) {
-    $routeProvider.when('/', {
-        templateUrl: 'index.html'
-    }).when('/orders', {
-        templateUrl: 'business/orders/orders.html'
+scotchApp.config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider.
+    state('index', {
+            url: "/index",
+            templateUrl: "index.html",
+            controller: 'scotchController'
+        }).
+    state('orders', {
+        url: "/orders",
+        templateUrl: "business/orders/orders.html"
     });
-}]);
+    $urlRouterProvider.otherwise("/");
+});
 
 scotchApp.controller('scotchController', function ($scope, $http, $modal) {
     $http.get("json/menu.json").success(function (data) {
@@ -21,8 +27,10 @@ scotchApp.controller('scotchController', function ($scope, $http, $modal) {
         var modalInstance = $modal.open({
             templateUrl: 'business/orders/order_details.html',
             controller: 'modalController',
-            resolve : {
-                order : function() {return order}
+            resolve: {
+                order: function () {
+                    return order
+                }
             }
         })
     };

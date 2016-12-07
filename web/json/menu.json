@@ -6,19 +6,19 @@
       {
         "text": "订单1",
         "id": 2,
-        "url": "#order2s",
+        "url": "orders",
         "thdMenus" : [
           {
             "text": "订单子列表",
             "id": 2,
-            "url": "#orders"
+            "url": "orders"
           }
         ]
       },
       {
         "text": "订单2",
         "id": 3,
-        "url": ""
+        "url": "orders"
       }
     ]
   },
@@ -29,7 +29,7 @@
       {
         "text": "会员列表",
         "id": 5,
-        "url": ""
+        "url": "orders"
       }
     ]
   },
@@ -40,7 +40,7 @@
       {
         "text": "商品列表",
         "id": 5,
-        "url": ""
+        "url": "orders"
       }
     ]
   }
